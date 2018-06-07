@@ -1,0 +1,14 @@
+Hola Diego
+
+te comparto el archivo con la estructura y como en su primera version debe funcionar teniendio en cuenta lo siguiente 
+
+las respuestas a los Items son las que dependiendo del sectorde la encuesta evaluaciòn pueden estar preseleccionados en no aplica dandole valor como se explica a continuaciòn.
+
+las ponderaciones de todas las fases o categorias o items son acumulativas y dentro de la misma tienen el mismo peso. siendo ese su valor màximo.  y las opciones de respeusta son cumple no cumple  parcialmente o no aplica en cuyo caso se le asigna el puntaje de cumple
+
+los listados de acciones de acuerdo a su categoria deben tener otro campo dodne se parametrice en numero de horas el estimado de horas para su cumplimiento, esto es segun sector.
+
+la pestaña de Planes son los definidos para cada sector y de acuerdo a la calificaciòn.este requiere que hagamos un levantamiento inicial del requerimiento.
+
+
+quedo atento resolver cualquier inquietud.
