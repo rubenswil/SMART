@@ -174,7 +174,7 @@
 							<div class="row">
 								<div class="col-xl-6 col-lg-6 col-12"></div>
                             	<div class="col-xl-6 col-lg-6 col-12" style="text-align: right;">
-                            		<a href="#" class="button-table theme-button-one" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+                            		<a href="#" class="button-table theme-button-one" data-toggle="modal" data-target="#insertModal"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
 								</div>
 							</div>
 						</div>
@@ -208,7 +208,7 @@
 	                                    <td>
 	                                    	<div class="row">
 		                                    	<div class="col-xl-6 col-lg-6 col-6">
-		                                    		<a href="#" class="button-table theme-button-one"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+		                                    		<a href="#" class="button-table theme-button-one" data-toggle="modal" data-target="#updateModal"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 												</div>
 												<div class="col-xl-6 col-lg-6 col-6">
 		                                    		<a href="#" class="button-table theme-button-one"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
@@ -335,11 +335,42 @@
 
 
 			<!-- Modal Insert -->
-			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal fade" id="insertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
 						    <h5 class="modal-title" id="exampleModalLabel">Insertar</h5>
+						    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						      <span aria-hidden="true">&times;</span>
+						    </button>
+					  	</div>
+					  	<div class="modal-body">
+					  		<div class="form-wrapper theme-form-one form-validation">
+					    		<div class="row">
+									<div class="col-sm-6 col-12"><input type="text" placeholder="Sector" name="sector"></div>
+									<div class="col-sm-6 col-12"><input type="text" placeholder="Fase" name="fase"></div>
+									<div class="col-sm-6 col-12"><input type="text" placeholder="Categoria" name="categoria"></div>
+									<div class="col-sm-6 col-12"><input type="text" placeholder="Estandar" name="estandar"></div>
+									<div class="col-sm-12 col-12"><textarea placeholder="Pregunta" name="pregunta" rows="2"></textarea></div>
+									<div class="col-sm-12 col-12"><textarea placeholder="Respuesta" name="respuesta"></textarea></div>
+									<div class="col-sm-12 col-12"><textarea placeholder="Accción" name="accion"></textarea></div>
+								</div> <!-- /.row -->
+							</div>		
+					  	</div>
+					 	<div class="modal-footer">
+					    	<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					    	<button type="button" class="btn btn-primary">Guardar</button>
+					  	</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Modal Update -->
+			<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						    <h5 class="modal-title" id="exampleModalLabel">Update</h5>
 						    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						      <span aria-hidden="true">&times;</span>
 						    </button>
