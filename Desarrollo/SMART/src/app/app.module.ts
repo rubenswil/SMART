@@ -17,6 +17,11 @@ import { LoginComponent } from './login/login.component';
 // services
 
 import { AuthService } from './services/auth.service';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
+
 
 const appRoutes: Routes = [
   {path: '' , component: HomeComponent},
@@ -38,7 +43,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment),
   ],
   providers: [ AuthService ],
   bootstrap: [AppComponent]
