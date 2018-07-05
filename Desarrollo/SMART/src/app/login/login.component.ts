@@ -17,13 +17,13 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmitLogin(){
-    this.authService.login(this.email, this.password).then((res) => {
-      this.router.navigate(['/pollster']);
-    }).catch((err) => {
-      console.log(err);
-      this.router.navigate(['/login']);
-    });
-  } 
+  // onSubmitLogin(){
+  //   this.authService.login(this.email, this.password).then((res) => {
+  //     this.router.navigate(['/pollster']);
+  //   }).catch((err) => {
+  //     console.log(err);
+  //     this.router.navigate(['/login']);
+  //   });
+  // } 
 
 }
