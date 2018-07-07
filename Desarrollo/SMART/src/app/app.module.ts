@@ -25,6 +25,8 @@ import { ResidentialComponent } from './residential/residential.component';
 import { PymeComponent } from './pyme/pyme.component';
 import { ResidentialFillupComponent } from './residential/residential-fillup/residential-fillup.component';
 import { ResidentialQuestionsComponent } from './residential/residential-questions/residential-questions.component';
+import { PymeFillupComponent } from './pyme/pyme-fillup/pyme-fillup.component';
+import { PymeQuestionsComponent } from './pyme/pyme-questions/pyme-questions.component';
 
 
 
@@ -52,6 +54,8 @@ const appRoutes: Routes = [
     PymeComponent,
     ResidentialFillupComponent,
     ResidentialQuestionsComponent,
+    PymeFillupComponent,
+    PymeQuestionsComponent,
   ],
   imports: [
     BrowserModule,
