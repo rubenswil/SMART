@@ -20,6 +20,11 @@ import { AuthService } from './services/auth.service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+import { PollsterPickComponent } from './pollster-pick/pollster-pick.component';
+import { ResidentialComponent } from './residential/residential.component';
+import { PymeComponent } from './pyme/pyme.component';
+import { ResidentialFillupComponent } from './residential/residential-fillup/residential-fillup.component';
+import { ResidentialQuestionsComponent } from './residential/residential-questions/residential-questions.component';
 
 
 
@@ -27,7 +32,10 @@ const appRoutes: Routes = [
   {path: '' , component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'pollster', component: PollsterComponent}
+  {path: 'pollster', component: PollsterComponent},
+  {path: 'field', component: PollsterPickComponent},
+  {path: 'residential', component: ResidentialComponent},
+  {path: 'pyme', component: PymeComponent }
 
 ];
 
@@ -39,6 +47,11 @@ const appRoutes: Routes = [
     PollsterComponent,
     HomeComponent,
     LoginComponent,
+    PollsterPickComponent,
+    ResidentialComponent,
+    PymeComponent,
+    ResidentialFillupComponent,
+    ResidentialQuestionsComponent,
   ],
   imports: [
     BrowserModule,
