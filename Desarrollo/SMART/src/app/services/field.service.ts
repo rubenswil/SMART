@@ -18,7 +18,7 @@ export class FieldService {
 
 
   getFields(){
-    this.fieldsList = this.firebase.list('fields');
+    return this.fieldsList = this.firebase.list('fields');
   }
 
   insertField(field: Field){

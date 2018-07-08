@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr'
 
 // components
 
@@ -72,7 +74,9 @@ const appRoutes: Routes = [
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [ AuthService, FieldService],
   bootstrap: [AppComponent]

@@ -1,7 +1,9 @@
 <div class="card">
   <div class="card-body">
 
-    <form #fieldForm="ngForm" (ngSubmit)="onSubmit(productForm)" >
+    <form #fieldForm="ngForm" (ngSubmit)="onSubmit(fieldForm)" >
+
+        <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="fieldService.selectedField.$key" >
 
         <div class="input-group">
             <input type="text" class="form-control" name="name"
