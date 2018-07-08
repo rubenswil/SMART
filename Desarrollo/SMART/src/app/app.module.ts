@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 // services
 
 import { AuthService } from './services/auth.service';
+import { FieldService } from './services/field.service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
@@ -27,6 +28,9 @@ import { ResidentialFillupComponent } from './residential/residential-fillup/res
 import { ResidentialQuestionsComponent } from './residential/residential-questions/residential-questions.component';
 import { PymeFillupComponent } from './pyme/pyme-fillup/pyme-fillup.component';
 import { PymeQuestionsComponent } from './pyme/pyme-questions/pyme-questions.component';
+import { AdminComponent } from './admin/admin.component';
+import { FieldManagementComponent } from './admin/field-management/field-management.component';
+import { FieldListComponent } from './admin/field-list/field-list.component';
 
 
 
@@ -37,7 +41,8 @@ const appRoutes: Routes = [
   {path: 'pollster', component: PollsterComponent},
   {path: 'field', component: PollsterPickComponent},
   {path: 'residential', component: ResidentialComponent},
-  {path: 'pyme', component: PymeComponent }
+  {path: 'pyme', component: PymeComponent },
+  {path: 'admin', component: AdminComponent}
 
 ];
 
@@ -56,6 +61,9 @@ const appRoutes: Routes = [
     ResidentialQuestionsComponent,
     PymeFillupComponent,
     PymeQuestionsComponent,
+    AdminComponent,
+    FieldManagementComponent,
+    FieldListComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +72,7 @@ const appRoutes: Routes = [
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
-  providers: [ AuthService ],
+  providers: [ AuthService, FieldService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
