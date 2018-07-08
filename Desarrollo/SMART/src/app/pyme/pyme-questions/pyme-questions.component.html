@@ -1,7 +1,10 @@
-<ul>
-    <li>q1</li>
-    <li>q2</li>
-    <li>q3</li>
-    <li>q4</li>
-    <li>q5</li>
-  </ul>
+<ul *ngFor="let question of questions">
+  <li> 
+  {{ question.title }}
+  </li>
+  <li>
+    ({{ question.content }})
+  </li>
+</ul>
+
+<!-- *ngIf="person.age < 30" -->

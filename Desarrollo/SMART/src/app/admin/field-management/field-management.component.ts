@@ -27,6 +27,7 @@ export class FieldManagementComponent implements OnInit {
     if(fieldForm.value.$key == null){
       this.fieldService.insertField(fieldForm.value);
       this.toastr.success("Campo Guardado");
+      this.resetForm(fieldForm);
     }
     else{
       this.fieldService.updateField(fieldForm.value);
