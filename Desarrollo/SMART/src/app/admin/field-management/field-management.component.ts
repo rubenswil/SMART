@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FieldService } from '../../services/field.service';
 
 @Component({
   selector: 'app-field-management',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FieldManagementComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fieldService: FieldService) { }
 
   ngOnInit() {
   }

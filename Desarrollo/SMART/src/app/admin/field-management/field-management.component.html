@@ -1,8 +1,18 @@
-<!-- <div class="card">
+<div class="card">
   <div class="card-body">
+
     <form #fieldForm="ngForm" (ngSubmit)="onSubmit(productForm)" >
-      <input type="text" class="form-control" name="name"
-       #name="ngModel" [(ngModel)]="fieldService.selectedField.name">
+
+        <div class="input-group">
+            <input type="text" class="form-control" name="name"
+            #name="ngModel" [(ngModel)]="fieldService.selectedField.name" placeholder="Nuevo Sector">
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit">
+                    Crear<i style="margin-left: 10px;" class="fa fa-plus-circle"></i>
+                  </button>
+            </span>
+         </div>
+
     </form>
   </div>
-</div> -->
+</div>
