@@ -15,8 +15,7 @@ export class PymeFillupComponent implements OnInit {
   constructor(private fieldService: FieldService) { }
 
   ngOnInit() {
-    return this.fieldService.getFields().snapshotChanges()
-    .subscribe(item => {
+    return this.fieldService.getFields().snapshotChanges().subscribe(item => {
       this.fieldsList = [];
       item.forEach(element => {
         let x = element.payload.toJSON();

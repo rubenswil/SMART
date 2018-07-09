@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PollService } from '../../services/poll.service';
+
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+
 @Component({
   selector: 'app-pyme-questions',
   templateUrl: './pyme-questions.component.html',
@@ -7,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PymeQuestionsComponent implements OnInit {
 
-  constructor() { }
+  questions1: AngularFireList<any>; 
+
+  constructor(private firebase: AngularFireDatabase) { }
 
   questions: any[] = 
   [
@@ -24,9 +30,10 @@ export class PymeQuestionsComponent implements OnInit {
       "content": "This is content 3"
     },
   ];
-  
 
   ngOnInit() {
+    // console.log(this.questions);
+    console.log(this.firebase.list('Encuesta/0/Sector/0/Fase/0/Categoria/0'));
   }
 
 }
