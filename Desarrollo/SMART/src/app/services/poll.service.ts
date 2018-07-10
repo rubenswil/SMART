@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList,  } from 'angularfire2/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PollService {
 
-  questions: AngularFireList<any>;
+  // declare and initialize a list with questions
+  
+
+  // const db = firebase.database();
 
   constructor(private firebase: AngularFireDatabase) { }
-  
+
   getQuestions(){
-    return this.questions = this.firebase.list('fields');
+    var top = this.firebase.list('Encuesta');
   }
+
+
 
 
 }

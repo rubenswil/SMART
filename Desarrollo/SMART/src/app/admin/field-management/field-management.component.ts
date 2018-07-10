@@ -26,12 +26,12 @@ export class FieldManagementComponent implements OnInit {
   onSubmit(fieldForm: NgForm){
     if(fieldForm.value.$key == null){
       this.fieldService.insertField(fieldForm.value);
-      this.toastr.success("Campo Guardado");
+      this.toastr.success("Sector Guardado");
       this.resetForm(fieldForm);
     }
     else{
       this.fieldService.updateField(fieldForm.value);
-      this.toastr.success("Campo Modificado");
+      this.toastr.success("Sector Modificado");
       this.resetForm(fieldForm);
     }
   }

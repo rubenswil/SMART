@@ -1,37 +1,46 @@
-<form>
+<form #companyForm="ngForm" (ngSubmit)="onSubmit(companyForm)" >
 
     <div class="form-group"> <!--  Name -->
       <label for="full_name_id" class="control-label">Nombre Empresa</label>
-      <input type="text" class="form-control" id="name" name="name">
+      <input type="text" class="form-control" #name="ngModel" 
+      [(ngModel)]="companyService.selectedCompany.name" name="name">
     </div>	
+
+    
   
     <div class="form-group"> <!-- Field drop -->
-      <label for="state_id" class="control-label">Sector</label>
-      <select class="form-control" >
+      <label for="field" class="control-label">Sector</label>
+      <select #type="ngModel" [(ngModel)]="companyService.selectedCompany.type" name="type" class="form-control" >
         <option *ngFor="let field of fieldsList" [value]="field.name">
           {{field.name}}
         </option>
       </select>					
-    </div>					
+    </div>		
+    
+  
                 
     <div class="form-group"> <!-- Street 2 -->
       <label for="contact" class="control-label">Contacto</label>
-      <input type="text" class="form-control" id="contact" name="contact" placeholder="">
+      <input type="text" class="form-control" #contact="ngModel" 
+      [(ngModel)]="companyService.selectedCompany.contact" name="contact" placeholder="">
     </div>	
   
     <div class="form-group"> <!-- City-->
       <label for="phone" class="control-label">Telefono</label>
-      <input type="text" class="form-control" id="phone" name="phone" placeholder="xxx-xxx-xxxx">
+      <input type="text" class="form-control" #phone="ngModel" 
+      [(ngModel)]="companyService.selectedCompany.phone" name="phone" placeholder="xxx-xxx-xxxx">
     </div>
     
     <div class="form-group"> <!-- City-->
       <label for="email" class="control-label">E-mail</label>
-      <input type="text" class="form-control" id="email" name="email" placeholder="@">
+      <input type="text" class="form-control" #email="ngModel" 
+      [(ngModel)]="companyService.selectedCompany.email" name="email" placeholder="@">
     </div>
 
     <div class="form-group"> <!-- State Button -->
       <label for="state_id" class="control-label">Numero de empleados</label>
-      <select class="form-control" id="state_id">
+      <select #employees="ngModel"
+       [(ngModel)]="companyService.selectedCompany.employees" class="form-control" name="employees">
         <option value=""></option>
         <option value="0">0</option>
         <option value="15">15</option>
@@ -43,20 +52,25 @@
     <div class="form-group"> <!-- City-->
       <label for="city_id" class="control-label">Realiza actividades de riesgo?</label>
       <br>
-      <label style="margin-right: 50px;"><input type="radio" name="optradio">Si</label>
-      <label><input type="radio" name="optradio">No</label>
+      <label style="margin-right: 50px;"><input type="radio" #risk="ngModel"
+         [(ngModel)]="companyService.selectedCompany.risk" name="risk" value="1">Si</label>
+      <label><input type="radio" #risk="ngModel"
+         [(ngModel)]="companyService.selectedCompany.risk" name="risk" value="0">No</label>
     </div>
 
     <div class="form-group"> <!-- ARL level-->
       <label for="arl" class="control-label">Categoria/Nivel ARL</label>
-      <input type="text" class="form-control" id="arl" name="arl" placeholder="#####">
+      <input type="text"  class="form-control" 
+      #arl="ngModel" [(ngModel)]="companyService.selectedCompany.arl" 
+      name="arl" placeholder="#####">
     </div>
 
 
     <div class="form-group">
         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
         <div class="col-md-12">
-            <textarea class="form-control" id="message" name="message" placeholder="" rows="5"></textarea>
+            <textarea class="form-control" #description="ngModel" 
+            [(ngModel)]="companyService.selectedCompany.description" name="description" placeholder="" rows="5"></textarea>
         </div>
     </div>
     

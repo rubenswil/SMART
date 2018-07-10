@@ -20,7 +20,7 @@ export class FieldService {
   getFields(){
     return this.fieldsList = this.firebase.list('fields');
   }
-
+  
   insertField(field: Field){
     this.fieldsList.push({
       name: field.name
