@@ -34,6 +34,8 @@ import { PymeQuestionsComponent } from './pyme/pyme-questions/pyme-questions.com
 import { AdminComponent } from './admin/admin.component';
 import { FieldManagementComponent } from './admin/field-management/field-management.component';
 import { FieldListComponent } from './admin/field-list/field-list.component';
+import { CompanyService } from './services/company.service';
+import { QuestionService } from './services/question.service';
 
 
 
@@ -78,7 +80,11 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [ AuthService, FieldService],
+  providers: [ 
+    AuthService, 
+    FieldService, 
+    CompanyService,
+    QuestionService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

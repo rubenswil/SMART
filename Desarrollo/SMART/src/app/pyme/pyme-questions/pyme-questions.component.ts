@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PollService } from '../../services/poll.service';
+import { QuestionService } from '../../services/question.service';
 
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Question } from '../../models/question';
 
 @Component({
   selector: 'app-pyme-questions',
@@ -11,29 +11,25 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 })
 export class PymeQuestionsComponent implements OnInit {
 
-  questions1: AngularFireList<any>; 
+  questionsList: Question[];
 
-  constructor(private firebase: AngularFireDatabase) { }
-
-  questions: any[] = 
-  [
-    {
-      "title": "Question 1",
-      "content": "This is content 1"
-    },
-    {
-      "title": "Question 2",
-      "content": "This is content 2"
-    },
-    {
-      "title": "Question 3",
-      "content": "This is content 3"
-    },
-  ];
+  constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
-    // console.log(this.questions);
-    console.log(this.firebase.list('Encuesta/0/Sector/0/Fase/0/Categoria/0'));
+    return this.questionService.getQuestions().snapshotChanges()
+    .subscribe(item => {
+      this.questionsList = [];
+      item.forEach(element => {
+        let x = element.payload.toJSON();
+        x["$key"] = element.key;
+        this.questionsList.push(x as Question);
+      })
+    })
   }
+
+  // define a key by grabbing the element payload and converting it to
+  //  JSON to then get the element from the collection and assigning it 
+  //  as an actual key element
+
 
 }
