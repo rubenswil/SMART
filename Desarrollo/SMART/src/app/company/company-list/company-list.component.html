@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+      <h6 class="text-center"><b>Empresas</b></h6>
+      <br>
+      <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Sector</th>
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Numero Empleados</th>
+                <th>Riesgo</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let company of companyList">
+            <td>{{company.name}}</td>
+            <td>{{company.type}} </td>
+            <td>{{company.contact}} </td>
+            <td>{{company.email}} </td>
+            <td>{{company.employees}}</td>
+            <td>{{company.risk}} </td>
+          </tr>
+        </tbody>
+  
+      </table>
+    </div>
+  </div>

@@ -39,6 +39,8 @@ import { QuestionService } from './services/question.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RolesComponent } from './roles/roles.component';
 import { FieldsComponent } from './fields/fields.component';
+import { CompanyComponent } from './company/company.component';
+import { CompanyListComponent } from './company/company-list/company-list.component';
 
 
 
@@ -53,7 +55,8 @@ const appRoutes: Routes = [
   {path: 'admin', component: AdminComponent},
   {path: 'admin/dashboard', component: DashboardComponent},
   {path: 'admin/dashboard/roles', component: RolesComponent},
-  {path: 'admin/dashboard/fields', component: FieldsComponent}
+  {path: 'admin/dashboard/fields', component: FieldsComponent},
+  {path: 'admin/companies', component: CompanyComponent}
 
 ];
 
@@ -78,6 +81,8 @@ const appRoutes: Routes = [
     DashboardComponent,
     RolesComponent,
     FieldsComponent,
+    CompanyComponent,
+    CompanyListComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ import { Company } from '../models/company';
 })
 export class CompanyService {
 
-  companyList:AngularFireList<any> = this.firebase.list('Company');
+  companyList:AngularFireList<any>;
   selectedCompany: Company = new Company();
   
   
@@ -18,9 +18,9 @@ export class CompanyService {
 
   }
 
-  // getCompanies(){
-  //   return this.companyList = this.firebase.list('Company');
-  // }
+  getCompanies(){
+    return this.companyList = this.firebase.list('Company');
+  }
 
   insertCompany(company: Company){
     this.companyList.push({
