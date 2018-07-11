@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
-import { Question } from '../models/question';
+// import { Question } from '../models/question';
 
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class QuestionService {
 
   questionsList: AngularFireList<any>;

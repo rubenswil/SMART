@@ -14,15 +14,21 @@ export class PymeQuestionsComponent implements OnInit {
   questionsList: Question[];
 
   constructor(private questionService: QuestionService) { }
-
+  
   ngOnInit() {
     return this.questionService.getQuestions().snapshotChanges()
     .subscribe(item => {
+      
       this.questionsList = [];
+      
       item.forEach(element => {
+
         let x = element.payload.toJSON();
+
         x["$key"] = element.key;
+
         this.questionsList.push(x as Question);
+
       })
     })
   }
