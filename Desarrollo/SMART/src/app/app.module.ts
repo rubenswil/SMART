@@ -32,10 +32,13 @@ import { ResidentialQuestionsComponent } from './residential/residential-questio
 import { PymeFillupComponent } from './pyme/pyme-fillup/pyme-fillup.component';
 import { PymeQuestionsComponent } from './pyme/pyme-questions/pyme-questions.component';
 import { AdminComponent } from './admin/admin.component';
-import { FieldManagementComponent } from './admin/field-management/field-management.component';
-import { FieldListComponent } from './admin/field-list/field-list.component';
+import { FieldManagementComponent } from './fields/field-management/field-management.component';
+import { FieldListComponent } from './fields/field-list/field-list.component';
 import { CompanyService } from './services/company.service';
 import { QuestionService } from './services/question.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RolesComponent } from './roles/roles.component';
+import { FieldsComponent } from './fields/fields.component';
 
 
 
@@ -47,7 +50,10 @@ const appRoutes: Routes = [
   {path: 'field', component: PollsterPickComponent},
   {path: 'residential', component: ResidentialComponent},
   {path: 'pyme', component: PymeComponent },
-  {path: 'admin', component: AdminComponent}
+  {path: 'admin', component: AdminComponent},
+  {path: 'admin/dashboard', component: DashboardComponent},
+  {path: 'admin/dashboard/roles', component: RolesComponent},
+  {path: 'admin/dashboard/fields', component: FieldsComponent}
 
 ];
 
@@ -69,6 +75,9 @@ const appRoutes: Routes = [
     AdminComponent,
     FieldManagementComponent,
     FieldListComponent,
+    DashboardComponent,
+    RolesComponent,
+    FieldsComponent,
   ],
   imports: [
     BrowserModule,
