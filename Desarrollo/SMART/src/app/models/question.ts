@@ -1,5 +1,7 @@
 export class Question {
     $key: string;
-    title: string;
-    content: string;
+    type: string;
+    standard: string;
+    score: number;
+    item: string;
 }

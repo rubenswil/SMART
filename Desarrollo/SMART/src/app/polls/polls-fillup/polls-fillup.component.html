@@ -1,0 +1,61 @@
+<form #questionForm="ngForm" (ngSubmit)="onSubmit(questionForm)" >
+
+  <div class="row">
+      <div class="col-md-3">
+          <div class="form-group"> <!-- Field drop -->
+            <label for="type" class="control-label">Ciclo</label>
+            <select #type="ngModel" [(ngModel)]="questionService.selectedQuestion.type" name="type" class="form-control" >
+                <option value=""></option>
+              <option value="I. PLANEAR">planear</option>
+              <option value="II. GESTION DEL CAMBIO">gestion</option>
+              <option value="III. VERIFICAR">verificar<verificar/option>
+              <option value="IV. ACTUAR">actuar</option>
+            </select>					
+          </div>	
+      </div>
+        
+      <div class="col-md-9">
+          <div class="form-group"> <!-- Field drop -->
+            <label for="standard" class="control-label">Categoria/Estandar</label>
+            <input type="text" class="form-control" #standard="ngModel" 
+            [(ngModel)]="questionService.selectedQuestion.standard" name="standard" >
+          </div>	
+      </div>   
+  </div>
+        
+  <div class="row">
+      <div class="col-md-3">
+          <div class="form-group"> <!-- State Button -->
+            <label for="score" class="control-label">Calificación</label>
+            <select #score="ngModel"
+             [(ngModel)]="questionService.selectedQuestion.score" class="form-control" name="score">
+              <option value=""></option>
+              <option value="0.5">0.5</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3</option>
+            </select>					
+          </div>
+      </div>
+      <div class="col-md-9">
+          <div class="form-group"> <!-- Field drop -->
+            <label for="item" class="control-label">Item</label>
+            <input type="text" class="form-control" #item="ngModel" 
+            [(ngModel)]="questionService.selectedQuestion.item" name="item" >
+          </div>
+      </div>
+  </div>
+  
+  
+  
+  
+ 
+  <br><br>
+  
+  <div class="form-group"> <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>     
+  
+</form>

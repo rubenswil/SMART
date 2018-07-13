@@ -41,6 +41,9 @@ import { RolesComponent } from './roles/roles.component';
 import { FieldsComponent } from './fields/fields.component';
 import { CompanyComponent } from './company/company.component';
 import { CompanyListComponent } from './company/company-list/company-list.component';
+import { PollsComponent } from './polls/polls.component';
+import { PollsFillupComponent } from './polls/polls-fillup/polls-fillup.component';
+import { PollsListComponent } from './polls/polls-list/polls-list.component';
 
 
 
@@ -56,7 +59,8 @@ const appRoutes: Routes = [
   {path: 'admin/dashboard', component: DashboardComponent},
   {path: 'admin/dashboard/roles', component: RolesComponent},
   {path: 'admin/dashboard/fields', component: FieldsComponent},
-  {path: 'admin/companies', component: CompanyComponent}
+  {path: 'admin/companies', component: CompanyComponent},
+  {path: 'admin/polls', component: PollsComponent}
 
 ];
 
@@ -83,6 +87,9 @@ const appRoutes: Routes = [
     FieldsComponent,
     CompanyComponent,
     CompanyListComponent,
+    PollsComponent,
+    PollsFillupComponent,
+    PollsListComponent,
   ],
   imports: [
     BrowserModule,

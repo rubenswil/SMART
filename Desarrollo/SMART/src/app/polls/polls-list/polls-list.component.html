@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+      <h6 class="text-center"><b>Preguntas</b></h6>
+      <br>
+      <table class="table table-sm table-hover">
+        <tbody>
+          <tr *ngFor="let question of questionsList">
+            <td>{{question.type}}</td>
+            <td>{{question.standard}}</td>
+            <td>{{question.item}}</td>
+            <td>{{question.score}}</td>
+            <td>
+              <a class="btn btn-secondary text-white pull-right" (click)="onEdit(field)">
+                <i class="fa fa-edit"></i>
+              </a>
+            </td>
+            <td>
+                <a class="btn btn-danger text-white" (click)="onDelete(field.$key)">
+                  <i class="fa fa-trash"></i>
+                </a>
+              </td>
+          </tr>
+        </tbody>
+  
+      </table>
+    </div>
+  </div>

@@ -6,8 +6,6 @@
       [(ngModel)]="companyService.selectedCompany.name" name="name">
     </div>	
 
-    
-  
     <div class="form-group"> <!-- Field drop -->
       <label for="field" class="control-label">Sector</label>
       <select #type="ngModel" [(ngModel)]="companyService.selectedCompany.type" name="type" class="form-control" >
@@ -16,9 +14,7 @@
         </option>
       </select>					
     </div>		
-    
-
-                
+          
     <div class="form-group"> <!-- Street 2 -->
       <label for="contact" class="control-label">Contacto</label>
       <input type="text" class="form-control" #contact="ngModel" 
