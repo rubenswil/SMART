@@ -40,7 +40,7 @@ export class PollsFillupComponent implements OnInit {
       this.resetForm(questionForm);
     }
     else{
-      // this.questionService.updateQuestion(questionForm.value);
+      this.questionService.updateQuestion(questionForm.value);
       this.toastr.success("Sector Modificado");
       this.resetForm(questionForm);
     }

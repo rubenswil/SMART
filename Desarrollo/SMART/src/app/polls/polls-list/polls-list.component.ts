@@ -31,6 +31,11 @@ export class PollsListComponent implements OnInit {
     })
   }
 
+  onEdit(question: Question){
+    this.questionService.selectedQuestion = Object.assign({}, question);
+    // this.toastr.success("Campo guardado");
+  }
+
   onDelete($key: string){
     this.questionService.deleteQuestion($key);
     this.toastr.success("Pregunta eliminada");

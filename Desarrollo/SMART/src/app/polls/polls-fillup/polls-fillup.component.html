@@ -1,6 +1,8 @@
 <form #questionForm="ngForm" (ngSubmit)="onSubmit(questionForm)" >
 
-  <div class="row">
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="questionService.selectedQuestion.$key" >
+  
+  <div class="row">   
       <div class="col-md-3">
           <div class="form-group"> <!-- Field drop -->
             <label for="type" class="control-label">Ciclo</label>

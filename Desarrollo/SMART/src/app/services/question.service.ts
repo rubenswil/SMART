@@ -27,11 +27,14 @@ export class QuestionService {
     });
   }
 
-  // updateField(question: Question){
-  //   this.questionsList.update(question.$key, {
-  //     'name': field.name
-  //   });
-  // }
+  updateQuestion(question: Question){
+    this.questionsList.update(question.$key, {
+      'type': question.type,
+      'standard': question.standard,
+      'score': question.score,
+      'item': question.item
+    });
+  }
 
   deleteQuestion($key: string){
     this.questionsList.remove($key);

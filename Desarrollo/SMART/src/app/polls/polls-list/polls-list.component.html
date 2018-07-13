@@ -10,12 +10,12 @@
             <td>{{question.item}}</td>
             <td>{{question.score}}</td>
             <td>
-              <a class="btn btn-secondary text-white pull-right" (click)="onEdit(field)">
+              <a class="btn btn-secondary text-white pull-right" (click)="onEdit(question)">
                 <i class="fa fa-edit"></i>
               </a>
             </td>
             <td>
-                <a class="btn btn-danger text-white" (click)="onDelete(field.$key)">
+                <a class="btn btn-danger text-white" (click)="onDelete(question.$key)">
                   <i class="fa fa-trash"></i>
                 </a>
               </td>
